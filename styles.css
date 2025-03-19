@@ -51,7 +51,7 @@ header {
 .navigation {
     flex-grow: 1;
     margin-left: auto;
-    opacity: 0;
+    opacity: 0; /* initially invisible */
     pointer-events: none;
     transition: opacity 300ms ease, transform 300ms ease;
 
@@ -63,9 +63,11 @@ header {
         transform: translate(0, -2em);
     }
 
+    /* when menu becomes visible */
     &.visible {
-        opacity: 1;
+        opacity: 1; /* make the menu visible */
         pointer-events: auto;
+        transform: translate(0, 0);
 
         @media screen and (max-width: 950px) {
             transform: translate(0, 0);

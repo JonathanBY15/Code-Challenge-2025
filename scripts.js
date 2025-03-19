@@ -5,15 +5,14 @@ document.addEventListener('DOMContentLoaded', function () {
     const menuIcon = menuBtn.querySelector('img');
 
     function toggleMenu() {
-		// Toggle the visibility
+        // Toggle visibility
         menu.classList.toggle('visible');
-        menu.style.display = menu.classList.contains('visible') ? 'block' : 'none';
 
-        // Toggle the menu icon
+        // Toggle menu icon (hamburger & xmark)
         menuIcon.src = menu.classList.contains('visible') ? 'assets/xmark.svg' : 'assets/bars.svg';
     }
 
-	// Click listener for the button
+    // Click listener for the button
     menuBtn.addEventListener('click', toggleMenu);
 });
 
