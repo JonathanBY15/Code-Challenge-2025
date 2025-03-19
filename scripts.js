@@ -27,7 +27,7 @@ window.onscroll = function () {
     const backToTopButton = document.getElementById('back-to-top');
     
 	// Display the button when scrolled down
-    if (window.scrollY > 300) { // Changed 500 to 300 since there isn't much content.
+    if (window.scrollY > 100) { // Changed 500 to 100 since there isn't much content.
         backToTopButton.style.display = "block";
     } else {
         backToTopButton.style.display = "none";   // Hide the button when scrollY is less than 300
