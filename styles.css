@@ -152,6 +152,7 @@ header {
     border-radius: 3em;
     color: currentcolor;
     text-decoration: none;
+    transition: 0.1s;
 
     &:hover,
     &:focus {
