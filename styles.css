@@ -164,6 +164,7 @@ header {
 .content-container {
     margin-block: 0;
     font-size: 1.25em;
+    line-height: 1.6em;
 
     @media screen and (max-width: 950px) {
         font-size: 1em;
@@ -393,7 +394,7 @@ section {
     color: currentcolor;
     text-decoration: none;
     width: 50px;
-    margin-top: -0.6em;
+    margin-top: -0.7em;
     text-align: center;
 
     &:hover,
