@@ -343,6 +343,16 @@ section {
 
 #contact-form input:focus {
     outline: none;
+}
+
+#contact-form input:not(:placeholder-shown):invalid {
+    outline: none;
+    border: 1px solid var(--error-hex);
+    background-color: rgba(var(--error-rgb), 0.05);
+}
+
+#contact-form input:focus:not(:placeholder-shown):valid {
+    outline: none;
     border: 1px solid var(--orange-hex);
     background-color: rgba(var(--orange-rgb), 0.05);
 }
