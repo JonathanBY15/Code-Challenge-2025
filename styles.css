@@ -147,7 +147,7 @@ header {
 
 .btn {
     display: inline-block;
-    padding: 1em 1.5em;
+    padding: 0.8em 1.5em;
     border: 1px solid;
     border-radius: 3em;
     color: currentcolor;
@@ -262,7 +262,7 @@ footer {
     box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.25);
 
     /* position the arrow in the middle */
-    @media screen and (max-width: 950px) {
+    @media screen and (max-width: 750px) {
         top: -20px;
         left: 50%;
         transform: translateX(
@@ -316,10 +316,6 @@ section {
 /* ----------------------- */
 /* ----- FORM STYLES ----- */
 .form-section {
-    text-align: center;
-}
-
-.form-section {
     .width-container {
         display: flex;
         flex-direction: column;
@@ -337,8 +333,8 @@ section {
     margin: 0 auto;
 }
 
-/* adjust form styles for desktop */
-@media (min-width: 951px) {
+/* adjust form styles for non-mobile */
+@media (min-width: 500px) {
     #contact-form {
         display: flex;
         flex-direction: column;
@@ -348,6 +344,10 @@ section {
     #contact-form input {
         width: 100%;
     }
+
+    .form-section {
+        text-align: center;
+    }
 }
 
 #contact-form label {
@@ -356,10 +356,10 @@ section {
 
 #contact-form input {
     border: 1px solid var(--dark-gray-hex);
-    background-color: #f4f5f6;
+    background-color: rgba(var(--dark-gray-rgb), 0.05);
     color: var(--dark-gray-hex);
     border-radius: 3em;
-    padding: 1em;
+    padding: 1.2em;
 }
 
 #contact-form input::placeholder {
@@ -387,13 +387,14 @@ section {
     all: unset;
     cursor: pointer;
     display: inline-block;
-    padding: 1em 1.5em;
+    padding: 0.8em 1.5em;
     border: 1px solid;
     border-radius: 3em;
     color: currentcolor;
     text-decoration: none;
-    max-width: 100px;
+    width: 50px;
     margin-top: -0.6em;
+    text-align: center;
 
     &:hover,
     &:focus {
