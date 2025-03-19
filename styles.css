@@ -197,7 +197,7 @@ header {
     }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 731px) {
     .section-title {
         font-size: 1.8em;
     }
@@ -262,7 +262,7 @@ footer {
     box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.25);
 
     /* position the arrow in the middle */
-    @media screen and (max-width: 750px) {
+    @media screen and (max-width: 731px) {
         top: -20px;
         left: 50%;
         transform: translateX(
