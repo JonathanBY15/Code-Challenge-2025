@@ -1,16 +1,19 @@
 document.addEventListener('DOMContentLoaded', function () {
-	const menu = document.getElementById('menu');
-	const menuBtn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
+    const menuBtn = document.getElementById('menu-btn');
+    const menuIcon = menuBtn.querySelector('img');
 
-	function toggleMenu() {
-		if (menu.style.display === "none") {
-			menu.style.display = "block";
-		} else {
-			menu.style.display = "none";
-		}
-	}
+    function toggleMenu() {
+		// Toggle the visibility
+        menu.classList.toggle('visible');
+        menu.style.display = menu.classList.contains('visible') ? 'block' : 'none';
 
-	menu.addEventListener('click', toggleMenu);
+        // Toggle the menu icon
+        menuIcon.src = menu.classList.contains('visible') ? 'assets/xmark.svg' : 'assets/bars.svg';
+    }
+
+	// Click listener for the button
+    menuBtn.addEventListener('click', toggleMenu);
 });
 
 document.getElementById('contact-form').addEventListener('submit', function (event) {
