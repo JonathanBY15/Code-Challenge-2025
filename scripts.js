@@ -1,3 +1,4 @@
+// Navbar Menu Toggle
 document.addEventListener('DOMContentLoaded', function () {
     const menu = document.getElementById('menu');
     const menuBtn = document.getElementById('menu-btn');
@@ -21,8 +22,23 @@ document.getElementById('contact-form').addEventListener('submit', function (eve
 	alert('Form submitted!');
 });
 
+// "back-to-top" functionality
 window.onscroll = function () {
-	if (window.scrollY > 500) {
-		document.getElementById('back-to-top').style.display = "block";
-	}
+    const backToTopButton = document.getElementById('back-to-top');
+    
+	// Display the button when scrolled down
+    if (window.scrollY > 300) { // Changed 500 to 300 since there isn't much content.
+        backToTopButton.style.display = "block";
+    } else {
+        backToTopButton.style.display = "none";   // Hide the button when scrollY is less than 300
+    }
 };
+
+// smooth scroll to top
+document.getElementById('back-to-top').addEventListener('click', function(e) {
+    e.preventDefault();
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
