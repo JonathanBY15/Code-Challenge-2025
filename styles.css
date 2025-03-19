@@ -45,7 +45,7 @@ header {
 
 .menu-btn img {
     width: 30px;
-    height: 30px;
+    height: auto;
 }
 
 .navigation {
@@ -248,7 +248,7 @@ footer {
 #back-to-top img {
     object-fit: contain; /* make the image scale properly */
     width: 15px;
-    height: 18px;
+    height: auto;
     filter: brightness(0) invert(1); /* make the arrow white */
 }
 

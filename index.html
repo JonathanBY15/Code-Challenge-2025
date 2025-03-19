@@ -58,8 +58,22 @@
                         </div>
                     </div>
 
+                    <!-- responsive image -->
                     <div class="column column-2">
-                        <img src="assets/image@2x.jpg" />
+                        <picture>
+                            <!-- small screen -->
+                            <source
+                                srcset="assets/image-mobile.jpg"
+                                media="(max-width: 731px)"
+                            />
+                            <!-- medium screen -->
+                            <source
+                                srcset="assets/image.jpg"
+                                media="(max-width: 1256px)"
+                            />
+                            <!-- default (large screen) -->
+                            <img src="assets/image@2x.jpg" alt="some-image" />
+                        </picture>
                     </div>
                 </div>
             </section>
