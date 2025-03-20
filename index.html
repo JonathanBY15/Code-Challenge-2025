@@ -15,18 +15,9 @@
     <body>
         <header>
             <a href="/" class="logo-wrapper">
-                <picture>
-                    <img
-                        src="assets/logo.svg"
-                        alt="A Totally Real Company"
-                        class="logo"
-                        loading="eager"
-                        width="203"
-                        height="64"
-                    />
-                </picture>
+                <img src="assets/logo.svg" alt="A Totally Real Company" class="logo" loading="eager" width="203" height="64" />
             </a>
-            <button id="menu-btn" class="menu-btn">
+            <button id="menu-btn" class="menu-btn" type="button">
                 <img src="assets/bars.svg" alt="menu" />
             </button>
 
@@ -46,31 +37,21 @@
                         <p class="section-subtitle">Example Subtitle</p>
                         <h2 class="section-title">Content & Image</h2>
                         <p class="content-container">
-                            Donec sed odio dui. Donec ullamcorper nulla non
-                            metus auctor fringilla. Maecenas sed diam eget risus
-                            varius blandit sit amet non magna. Aenean lacinia
-                            bibendum nulla sed consectetur. Nulla vitae elit
-                            libero, a pharetra augue. Morbi leo risus, porta ac
-                            consectetur ac, vestibulum at eros.
+                            Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla. Maecenas sed diam eget risus varius blandit sit
+                            amet non magna. Aenean lacinia bibendum nulla sed consectetur. Nulla vitae elit libero, a pharetra augue. Morbi leo risus,
+                            porta ac consectetur ac, vestibulum at eros.
                         </p>
                         <div class="btn-wrapper">
                             <a href="#" class="btn">Example CTA</a>
                         </div>
                     </div>
 
-                    <!-- responsive image -->
                     <div class="column column-2">
                         <picture>
                             <!-- small screen -->
-                            <source
-                                srcset="assets/image-mobile.jpg"
-                                media="(max-width: 731px)"
-                            />
-                            <!-- medium screen -->
-                            <source
-                                srcset="assets/image.jpg"
-                                media="(max-width: 1256px)"
-                            />
+                            <source srcset="assets/image-mobile.jpg" media="(max-width: 731px)" />
+                            <!-- medium screen (with density descriptors for 1x and 2x screens) -->
+                            <source srcset="assets/image.jpg 1x, assets/image@2x.jpg 2x" media="(max-width: 1256px)" />
                             <!-- default (large screen) -->
                             <img src="assets/image@2x.jpg" alt="some-image" />
                         </picture>
@@ -84,28 +65,17 @@
                         <p class="section-subtitle">Example Subtitle</p>
                         <h2 class="section-title">Full Width Form</h2>
                         <p class="content-container">
-                            Donec sed odio dui. Donec ullamcorper nulla non
-                            metus auctor fringilla. Maecenas sed diam eget risus
-                            varius blandit sit amet non magna.
+                            Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla. Maecenas sed diam eget risus varius blandit sit
+                            amet non magna.
                         </p>
                     </div>
 
                     <form id="contact-form">
                         <label for="name">Name</label>
-                        <input
-                            type="text"
-                            id="name"
-                            placeholder="Name"
-                            required
-                        />
+                        <input type="text" id="name" placeholder="Name" required />
                         <label for="email">Email</label>
-                        <input
-                            type="email"
-                            id="email"
-                            placeholder="Email"
-                            required
-                        />
-                        <button class="btn">Submit</button>
+                        <input type="email" id="email" placeholder="Email" required />
+                        <button class="btn" type="submit">Submit</button>
                     </form>
                 </div>
             </section>
@@ -113,7 +83,7 @@
 
         <footer>
             <p>&copy;2025 DynamiX</p>
-            <a href="#" id="back-to-top">
+            <a id="back-to-top">
                 <img src="assets/arrow-up.svg" alt="Back to Top" />
             </a>
         </footer>
