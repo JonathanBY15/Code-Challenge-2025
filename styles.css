@@ -386,10 +386,6 @@ section:not(:first-child) {
     }
 }
 
-#contact-form label {
-    display: none;
-}
-
 #contact-form input {
     border: 1px solid var(--dark-gray-hex);
     background-color: rgba(var(--dark-gray-rgb), 0.05);
@@ -437,4 +433,17 @@ section:not(:first-child) {
         background-color: orange;
         color: white;
     }
+}
+
+/* hide elements but keep them accessible to screen readers */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    overflow: hidden;
 }
