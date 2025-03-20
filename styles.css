@@ -57,6 +57,18 @@ header {
     height: auto;
 }
 
+/* shrink menu-btn and img on extra small screens */
+@media (max-width: 350px) {
+    .menu-btn {
+        width: 50px;
+        height: 50px;
+    }
+
+    .menu-btn img {
+        width: 25px;
+    }
+}
+
 .navigation {
     flex-grow: 1;
     margin-left: auto;
