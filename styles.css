@@ -21,6 +21,12 @@ body {
     display: flex;
     flex-direction: column;
     min-height: calc(100vh - 20px); /* subtract vertical padding from vh */
+
+    /* mobile padding */
+    @media (max-width: 700px) {
+        padding: 9px 15px;
+        min-height: calc(100vh - 18px);
+    }
 }
 
 /* ------------------------------- */
