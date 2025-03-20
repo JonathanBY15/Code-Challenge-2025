@@ -50,6 +50,9 @@ header {
     align-items: center;
     border-color: transparent;
     box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.25);
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
 }
 
 .menu-btn img {
@@ -57,13 +60,12 @@ header {
     height: auto;
 }
 
-/* shrink menu-btn and img on extra small screens */
+/* shrink menu-btn and img on extra small screens (<350) */
 @media (max-width: 350px) {
     .menu-btn {
         width: 50px;
         height: 50px;
     }
-
     .menu-btn img {
         width: 25px;
     }
@@ -71,6 +73,7 @@ header {
 
 .navigation {
     flex-grow: 1;
+    padding: 10px;
     margin-left: auto;
     opacity: 0; /* initially invisible */
     pointer-events: none;
@@ -84,7 +87,6 @@ header {
         transform: translate(0, -2em);
     }
 
-    /* when menu becomes visible */
     &.visible {
         opacity: 1; /* make the menu visible */
         pointer-events: auto;
@@ -122,6 +124,7 @@ header {
     height: 100%;
 }
 
+/* drop-down nav menu styles */
 @media screen and (max-width: 950px) {
     .navigation {
         position: absolute;
@@ -136,7 +139,6 @@ header {
         flex-direction: column;
         align-items: center;
     }
-
     .navigation-list {
         padding: 0;
         margin: 0;
@@ -146,14 +148,12 @@ header {
         justify-content: center;
         align-items: center;
     }
-
     .navigation-list li {
         display: flex;
         justify-content: center;
         align-items: center;
         height: auto;
     }
-
     .navigation-list li a {
         text-decoration: none;
         color: var(--white-hex);
@@ -166,6 +166,9 @@ header {
     }
 }
 
+/* -------------------------------- */
+/* -------- CONTENT STYLES -------- */
+/* -------------------------------- */
 .btn {
     display: inline-block;
     padding: 0.8em 1.5em;
@@ -176,9 +179,9 @@ header {
     transition: 0.1s;
 
     &:hover,
-    &:focus {
-        background-color: orange;
-        color: white;
+    &:focus-visible {
+        background-color: var(--orange-hex);
+        color: var(--white-hex);
     }
 }
 
@@ -206,25 +209,22 @@ header {
     }
 }
 
-/* MEDIA QUERIES FOR SECTION TITLE */
+/* Responsive .section-title (font size) */
 @media (max-width: 1250px) {
     .section-title {
         font-size: 3em;
     }
 }
-
 @media (max-width: 1000px) {
     .section-title {
         font-size: 2.5em;
     }
 }
-
 @media (max-width: 731px) {
     .section-title {
         font-size: 1.8em;
     }
 }
-
 @media (max-width: 500px) {
     .section-title {
         font-size: 1.5em;
@@ -241,12 +241,6 @@ header {
     }
 }
 
-button {
-    padding: 10px;
-    font-size: 18px;
-    cursor: pointer;
-}
-
 img {
     width: 100%;
     height: auto;
@@ -254,55 +248,6 @@ img {
 
 ul {
     list-style: none;
-}
-
-#menu {
-    padding: 10px;
-}
-
-/* ------------------------------------------------ */
-/* ----- Footer and Back to Top button styles  -----*/
-footer {
-    position: relative;
-    padding: 20px;
-    border-radius: 0.5em;
-    background-color: var(--dark-gray-hex);
-    color: var(--white-hex);
-    text-align: center;
-    margin-top: auto; /* pushes the footer to the bottom */
-}
-
-footer p {
-    line-height: 24px;
-    font-weight: 400;
-}
-
-#back-to-top {
-    position: absolute;
-    top: -20px;
-    right: 40px;
-    background-color: var(--orange-hex);
-    padding: 15px;
-    border-radius: 50%;
-    display: none; /* initially hidden */
-    width: 20px;
-    height: 20px;
-    box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.25);
-    cursor: pointer;
-
-    /* position the arrow in the middle */
-    @media screen and (max-width: 731px) {
-        top: -20px;
-        left: 50%;
-        transform: translateX(-50%); /* Offset the left position by half of the button's width to truly center it (ChatGPT for the win) */
-    }
-}
-
-#back-to-top img {
-    object-fit: contain; /* make the image scale properly */
-    width: 15px;
-    height: auto;
-    filter: brightness(0) invert(1); /* make the arrow white */
 }
 
 section {
@@ -344,8 +289,9 @@ section:not(:first-child) {
     border-radius: 24px;
 }
 
-/* ----------------------- */
-/* ----- FORM STYLES ----- */
+/* --------------------------------------- */
+/* ------------- FORM STYLES ------------- */
+/* --------------------------------------- */
 .form-section {
     .width-container {
         display: flex;
@@ -376,11 +322,9 @@ section:not(:first-child) {
         flex-direction: column;
         align-items: center;
     }
-
     #contact-form input {
         width: 100%;
     }
-
     .form-section {
         text-align: center;
     }
@@ -429,13 +373,59 @@ section:not(:first-child) {
     text-align: center;
 
     &:hover,
-    &:focus {
-        background-color: orange;
-        color: white;
+    &:focus-visible {
+        background-color: var(--orange-hex);
+        color: var(--white-hex);
     }
 }
 
-/* hide elements but keep them accessible to screen readers */
+/* ------------------------------------------------ */
+/* ----- Footer and Back to Top button styles  -----*/
+/* ------------------------------------------------ */
+footer {
+    position: relative;
+    padding: 20px;
+    border-radius: 0.5em;
+    background-color: var(--dark-gray-hex);
+    color: var(--white-hex);
+    text-align: center;
+    margin-top: auto; /* pushes the footer to the bottom */
+}
+
+footer p {
+    line-height: 24px;
+    font-weight: 400;
+}
+
+#back-to-top {
+    position: absolute;
+    top: -20px;
+    right: 40px;
+    background-color: var(--orange-hex);
+    padding: 15px;
+    border-radius: 50%;
+    display: none; /* initially hidden */
+    width: 20px;
+    height: 20px;
+    box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+
+    /* center the button */
+    @media screen and (max-width: 731px) {
+        top: -20px;
+        left: 50%;
+        transform: translateX(-50%); /* Offset the left position by half of the button's width to truly center it (ChatGPT for the win) */
+    }
+}
+
+#back-to-top img {
+    object-fit: contain; /* make the image scale properly */
+    width: 15px;
+    height: auto;
+    filter: brightness(0) invert(1); /* make the arrow white */
+}
+
+/* hide elements while keeping them accessible to screen readers */
 .visually-hidden {
     position: absolute;
     width: 1px;
