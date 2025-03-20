@@ -108,20 +108,12 @@ header {
     height: 100%;
 }
 
-.navigation-list li {
-    display: flex;
-    align-items: center;
-    height: 100%;
-}
-
-.navigation-list li a {
+.navigation-list a {
     text-decoration: none;
     color: var(--white-hex);
     font-weight: 700;
     font-size: 24px;
     display: inline-flex;
-    align-items: center;
-    height: 100%;
 }
 
 /* drop-down nav menu styles */
@@ -140,28 +132,11 @@ header {
         align-items: center;
     }
     .navigation-list {
-        padding: 0;
-        margin: 0;
-        display: flex;
         flex-direction: column;
-        gap: 1.8em;
         justify-content: center;
-        align-items: center;
+        font-size: 24px;
     }
     .navigation-list li {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: auto;
-    }
-    .navigation-list li a {
-        text-decoration: none;
-        color: var(--white-hex);
-        font-weight: 700;
-        font-size: 24px;
-        display: flex;
-        align-items: center;
-        height: auto;
         padding: 30px;
     }
 }
@@ -315,8 +290,21 @@ section:not(:first-child) {
     margin-top: -0.8em;
 }
 
+#contact-form input {
+    border: 1px solid var(--dark-gray-hex);
+    background-color: rgba(var(--dark-gray-rgb), 0.05);
+    color: var(--dark-gray-hex);
+    border-radius: 3em;
+    padding: 1em;
+    font-size: 16px;
+    outline: none;
+}
+
 /* adjust form styles for non-mobile */
 @media (min-width: 500px) {
+    .form-section {
+        text-align: center;
+    }
     #contact-form {
         display: flex;
         flex-direction: column;
@@ -325,18 +313,6 @@ section:not(:first-child) {
     #contact-form input {
         width: 100%;
     }
-    .form-section {
-        text-align: center;
-    }
-}
-
-#contact-form input {
-    border: 1px solid var(--dark-gray-hex);
-    background-color: rgba(var(--dark-gray-rgb), 0.05);
-    color: var(--dark-gray-hex);
-    border-radius: 3em;
-    padding: 1em;
-    font-size: 16px;
 }
 
 #contact-form input::placeholder {
@@ -344,24 +320,18 @@ section:not(:first-child) {
     font-weight: 100;
 }
 
-#contact-form input:focus {
-    outline: none;
-}
-
 #contact-form input:not(:placeholder-shown):invalid {
-    outline: none;
     border: 1px solid var(--error-hex);
     background-color: rgba(var(--error-rgb), 0.05);
 }
 
 #contact-form input:focus:not(:placeholder-shown):valid {
-    outline: none;
     border: 1px solid var(--orange-hex);
     background-color: rgba(var(--orange-rgb), 0.05);
 }
 
 #contact-form button {
-    all: unset;
+    all: unset; /* remove default browser styles*/
     cursor: pointer;
     display: inline-block;
     padding: 0.8em 1.5em;
@@ -390,9 +360,6 @@ footer {
     color: var(--white-hex);
     text-align: center;
     margin-top: auto; /* pushes the footer to the bottom */
-}
-
-footer p {
     line-height: 24px;
     font-weight: 400;
 }
